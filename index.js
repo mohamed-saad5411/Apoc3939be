@@ -9,6 +9,7 @@ dotenv.config()
 app.use(cors())
 app.use(express.json())
 app.use('/api/v1/user' , userRouter)
+app.get('/', (req, res) => res.send('Hello connected api!'))
 
 
 dbConnection()
